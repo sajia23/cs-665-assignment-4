@@ -2,15 +2,18 @@
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
 | Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Date         | 11/10/2024                 |
+| Course       | Fall                       |
+| Assignment # | 4                          |
 
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
+Answer:
+In this assignment, I implement a customer retrieving service using adapter pattern and proxy pattern. So every request will be accepted by a proxy. And proxy will decide which kind of service should be called.
+Also I used adapter pattern to let legacy system compatible with new system.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/sajia23/cs-665-assignment-4
 
 # Implementation Description 
 
@@ -19,11 +22,19 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+- Answer: I used enum type do define the type of data source. So when there is a new data source, it will be added into the enum class. And in other codes, it is easier to distinguish by enum class.
+Also I use factory pattern when producing customer instances.
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+- Answer: I use proxy pattern for handling requests, so every request will be sent into the same method. It is easy to understand. Also, I use adapter pattern for legacy system compatible with new system.By providing an adapter that converts
+  the existing class's interface to the one expected by the client code, the
+  Adapter pattern allows the two incompatible components to work
+  together seamlessly.
 - Describe how you have avoided duplicated code and why it is important.
+- Answer: I use the singleton pattern when creating new instance. So it is easy to avoid duplicated code. It's important for making implementation clear. And it will save the memory by using this pattern.
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+- Answer: I use singleton pattern for creating instance, proxy pattern for choosing different service to handle different request by data source, adapter pattern for legacy system compatible with new system, factory pattern for creating new customer instances, facade pattern for composite multi process.
 
 
 # Maven Commands
