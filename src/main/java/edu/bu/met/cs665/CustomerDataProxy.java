@@ -85,7 +85,7 @@ public class CustomerDataProxy implements CustomerDataProxyInterface{
     @Override
     public Customer getCustomer(int customerId) {
         if(customerMap.get(customerId) == DataType.Disk) {
-            return httpsToCustomerDataViaUsbAdapter.getCustomerViaUsb(customerId);
+            return httpsToCustomerDataViaUsbAdapter.getCustomerViaHttps(customerId);
         } else {
             return customerDataViaHttps.getCustomerViaHttps(customerId);
         }

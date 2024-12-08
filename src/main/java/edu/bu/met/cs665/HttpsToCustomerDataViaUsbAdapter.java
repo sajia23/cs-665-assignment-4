@@ -7,7 +7,7 @@
  */
 package edu.bu.met.cs665;
 
-public class HttpsToCustomerDataViaUsbAdapter implements CustomerDataViaUsbInterface{
+public class HttpsToCustomerDataViaUsbAdapter implements CustomerDataViaHttpsInterface{
 
     CustomerDataViaUsb customerDataViaUsb;
 
@@ -56,7 +56,7 @@ public class HttpsToCustomerDataViaUsbAdapter implements CustomerDataViaUsbInter
      * @return
      */
     @Override
-    public Customer getCustomerViaUsb(int customerId) {
+    public Customer getCustomerViaHttps(int customerId) {
         return customerDataViaUsb.getCustomerViaUsb(customerId);
     }
 }
